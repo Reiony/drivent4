@@ -1,76 +1,68 @@
 # Driven.t - Back-end
 
-Back-end for Driven.t, an event management solution.
+## 📝 Sobre
 
-## About
+Driven.t é uma solução de gerenciamento de eventos. Você pode gerenciar todos os aspectos do seu evento como o evento em si, localidade, reserva de quartos, dentre outros.
 
-Driven.t is a web browser application with which you can manage every single aspect of your event.
 
-## How to run for development
+## Tecnologias
+<img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"/>
+<img src="https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/>
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white"/>
+<img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"/>
+<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
 
-1. Clone this repository
-2. Install all dependencies
 
-```bash
-npm i
-```
+## 🧪 Testes
 
-3. Create a PostgreSQL database with whatever name you want
-4. Configure the `.env.development` file using the `.env.example` file (see "Running application locally or inside docker section" for details)
-5. Run all migrations
-
-```bash
-npm run dev:migration:run
-```
-
-6. Seed db
-
-```bash
-npm run dev:seed
-```
-
-6. Run the back-end in a development environment:
-
-```bash
-npm run dev
-```
-
-## How to run tests
-
-1. Follow the steps in the last section
-2. Configure the `.env.test` file using the `.env.example` file (see "Running application locally or inside docker" section for details)
-3. Run all migrations:
+1. Configure o banco de dados PostgreSQL para testes:
+2. Configure o arquivo `.env.test`
+3. Execute todas as migrações do banco de dados para testes:
 
 ```bash
 npm run test:migration:run
 ```
 
-4. Run test:
+4. Rode os testes:
 
 ```bash
 npm run test
 ```
 
-## Building and starting for production
+
+## 💻 Como iniciar a API
+
+1. Clone o repositório:
 
 ```bash
-npm run build
-npm start
+git clone https://github.com/seu-usuario/drivent-4.git
+cd drivent-4
 ```
 
-## Running migrations or generate prisma clients
+2. Instale as dependencias
 
-Before running migrations make sure you have a postgres db running based on `.env.development` or `.env.test` file for each environment. You can start a postgres instance by typing `npm run dev:postgres` or `npm run test:postgres`. The host name is the name of the postgres container inside docker-compose file if you are running the application inside a docker container or localhost if you are running it locally.
+```bash
+npm i
+```
 
-You can operate on databases for different environments, but it is necessary to populate correct env variables for each environment first, so in order to perform db operations type the following commands:
+3. Crie um banco de dados PostgreSQL com o nome que desejar
+4. Configure o arquivo `.env.development` 
+5. Execute todas as migrações do banco de dados:
 
-- `npm run dev:migration:run` - run migrations for development environment by loading envs from .env.development file. It uses [dotenv-cli](https://github.com/entropitor/dotenv-cli#readme) to load envs from .env.development file.
-- `npm run test:migration:run` - the same, but for test environment
+```bash
+npm run dev:migration:run
+```
 
-- `npm run dev:migration:generate -- --name ATOMIC_OPERATION_NAME` - generate and run migration and prisma client for development environment by loading envs from .env.development file. Replace `ATOMIC_OPERATION_NAME` by the name of the migration you want to generate.
+6. Preencha o banco de dados:
 
-## What to do when add new ENV VARIABLES
+```bash
+npm run dev:seed
+```
 
-There are several things you need to do when you add new ENV VARIABLES:
-- Add them to `.env.example` file
-- Add them to your local `.env.development` and `.env.test` files
+7. Inicie o back-end em ambiente de desenvolvimento:
+
+```bash
+npm run dev
+```
