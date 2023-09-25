@@ -4,6 +4,10 @@
 
 Driven.t é uma solução de gerenciamento de eventos. Você pode gerenciar todos os aspectos do seu evento como o evento em si, localidade, reserva de quartos, dentre outros.
 
+OBS: Este é apenas um segmento do projeto Drivent. Para ter acesso aos outros repositórios
+- [Clique aqui para o segmento de implementação Typescript](https://github.com/Reiony/drivent1)
+- [Clique aqui para o segmento de implementação de PrismaORM](https://github.com/Reiony/drivent-prisma)
+- [Clique aqui para o segmento de implementação de Testes de Integração](https://github.com/Reiony/drivent_tintegracao)
 
 ## Tecnologias
 <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"/>
